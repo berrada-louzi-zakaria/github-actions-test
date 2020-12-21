@@ -12,6 +12,11 @@ jobs:
         run: |
           node -v 
           npm -v
+      - name: run python ccmd
+        run: |
+          import certfi
+          print(certifi.where())
+        shell: python 
 
 
 
