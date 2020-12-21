@@ -12,9 +12,8 @@ jobs:
         run: |
           node -v 
           npm -v
-      - name: run python ccmd
-        run: |
-          py -m certifi
+      - name: run python cmd
+        run: pip install boto3
         shell: python
 
 
