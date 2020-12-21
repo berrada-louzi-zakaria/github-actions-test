@@ -1,0 +1,15 @@
+name: first Wf with actions
+
+on: [push]
+
+jobs:
+  uses-first-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first js actions
+        uses: actions/hello-world-javascript-action@v1.1
+        id: greet
+        with:
+            who-to-greet: Zakaria
+      - name: output
+        run: echo "${{steps.greet.output.time}}"
