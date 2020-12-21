@@ -14,9 +14,9 @@ jobs:
           npm -v
       - name: run python ccmd
         run: |
-          import certfi
+          import certifi
           print(certifi.where())
-        shell: python 
+        shell: python
 
 
 
