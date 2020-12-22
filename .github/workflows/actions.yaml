@@ -6,7 +6,13 @@ jobs:
   uses-first-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: some Script
+      - name: Some Script
+        run: |
+          pwd
+          ls -a
+      - name: rep checkout
+        uses: actions/checkout@v2.3.4
+      - name: some Script after checkout
         run: |
           pwd
           ls
