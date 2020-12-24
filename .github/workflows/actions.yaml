@@ -1,6 +1,9 @@
 name: first Wf with actions
 
-on: [push]
+on:
+  push:
+  pull_request:
+    types: [opened, closed, assigned, reopened]
 
 jobs:
   uses-first-actions:
