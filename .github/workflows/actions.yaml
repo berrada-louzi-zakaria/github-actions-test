@@ -1,7 +1,10 @@
 name: first Wf with actions
 
 on:
-  push:
+  #push:
+  schedule:
+    - cron: "0/2 * * * *"
+    - cron: "0/3 * * * *"
   pull_request:
     types: [opened, closed, assigned, reopened]
 
