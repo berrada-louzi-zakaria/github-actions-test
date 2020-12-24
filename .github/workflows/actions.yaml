@@ -6,7 +6,7 @@ on:
   #  - cron: "5 * * * *"
   #  - cron: "7 * * * *"
   pull_request:
-    types: [opened, closed, assigned, reopened]
+    types: [opened, closed, assigned]
 
 jobs:
   uses-first-actions:
