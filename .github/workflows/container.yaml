@@ -1,0 +1,12 @@
+name: Container
+on: push
+jobs:
+  test-with-container:
+    runs-on: ubuntu-latest
+    container:
+      image: node:15.5.0-alpine3.10
+    steps:
+      - name: get version
+        run: |
+          node -v
+          cat etc/os-release
