@@ -11,6 +11,7 @@ jobs:
         include:
           - os: ubuntu-latest
             node-version: 8
+            is-ubuntu-8: "True"
         exclude:
           - os: ubuntu-latest
             node-version: 6
@@ -19,6 +20,8 @@ jobs:
       max-parallel: 2
       fail-fast: true
     runs-on: ${{ matrix.os }}
+    env:
+      IS_UBUNTU_8: ${{ matrix.is-ubuntu-8 }}
     steps:
       - name: get node version
         run: node -v
@@ -26,4 +29,6 @@ jobs:
         with:
             node-version: ${{  matrix.node-version }}
       - name: get last node version
-        run: node -v
+        run: |
+          node -v
+          echo "IS_UBUNTU_8 Value" $IS_UBUNTU_8
