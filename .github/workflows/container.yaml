@@ -9,4 +9,4 @@ jobs:
       - name: get version
         run: |
           node -v
-          cat etc/os-release
+          cat /etc/os-release
